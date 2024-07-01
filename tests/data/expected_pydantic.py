@@ -71,6 +71,7 @@ class Test(BaseModel):
 
     model_config: ConfigDict = ConfigDict( # type: ignore
         validate_assigment = True,
+        use_enum_values = True,
     ) # type: ignore
 
     name: str
@@ -208,6 +209,7 @@ class Test2(BaseModel):
 
     model_config: ConfigDict = ConfigDict( # type: ignore
         validate_assigment = True,
+        use_enum_values = True,
     ) # type: ignore
 
     names: list[str] = Field(default_factory=list)

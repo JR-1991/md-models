@@ -87,6 +87,7 @@ class {{ object.name }}(BaseModel):
 
     model_config: ConfigDict = ConfigDict( # type: ignore
         validate_assigment = True,
+        use_enum_values = True,
     ) # type: ignore
     {% for attribute in object.attributes %}
     {%- if attribute.multiple is true %}
